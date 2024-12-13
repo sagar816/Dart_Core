@@ -675,12 +675,345 @@ if(condition){
   // } else if (a == 20) {
   //   print("Value is $a");
   // } else {
-  //   print("Invalid Value");
+  //   print("Invalid Value");  // can remove else part if not required
   // }
 
+// # LOOPS
+// ## FOR LOOP
+/* 
+    for(initial_value; condition; inc/dec){   //inital value will be executed only once
+- condition check karega
+- code execute karega
+- inc/dec karega
+- repeat - condition check karega until true
+    }
+*/
 
+//regular access of elements
+//   var student = ["Sagar", "Rohan", "Kita"];
+//   print(student[0]);
+//   print(student[1]);
+//   print(student[2]);
+// }
+  // var student = ["Sagar", "Rohan", "Kita", "Sujay"];
+  // for (var i = 0; i < student.length; i++) {
+  //   print(student[i]);
+  // }
 
+// ## while loop
+  // var n = 1;
+  // while (n <= 5) {
+  //   print('Number $n');
+  //   n++;
+  // }
 
+  // var student = ["Sagar", "Rohan", "Kita", "Sujay"];
+  // var i = 0;
+  // while (i < student.length) {
+  //   //works till condition is false
+  //   print(student[i]);
+  //   i++;
+  // }
 
-  //2.25
+  // WARNING = DO NOT RUN THIS
+  // var is_fetching = true;
+  // while (is_fetching) {
+  //   print("Data fetching....");
+  // }
+
+// ## do-while loop
+  // var n = 1;
+  // do {
+  //   print("Number $n");
+  //   n++;
+  // } while (n <= 3);  //if condition is true, it eill again start from do
+
+  // WARNING = DO NOT RUN THIS
+  // var is_fetching = true;
+  // do {
+  //   print("Data Fetching....");
+  // } while (is_fetching);
+
+// ## for-in loop with List
+  // var student = ['Sagar', "Rahul", "Sujay", "Kita"];
+  // for (var stu in student) {
+  //   print(stu);
+  // }
+
+//## for-in loop with Set
+  // var student = {'Sagar', "Rahul", "Sujay", "Kita"};
+  // for (var stu in student) {
+  //   print(stu);
+  // print(student.runtimeType);
+  // }
+
+//## for-in loop with Map
+
+  // var address = {'name': 'Sagar', 'city': 'Thane', 'state': "Maharashtra"};
+  // for (var key in address.keys) {
+  //   print(key);
+  // }
+  // for (var value in address.values) {
+  //   print(value);
+  // }
+
+// ## FOREACH LOOP with LIST
+
+  // var student = ['Sagar', 'Kita', 'Sujay'];
+  // student.forEach((value) => print(value));
+
+// ## FOREACH LOOP with SET
+
+  // var student = {'Sagar', 'Kita', 'vicky'};
+  // student.forEach((value) => print(value));
+
+// ## FOREACH LOOP with MAP
+
+  // var address = {'name': 'Sagar', 'city': 'Thane', 'state': 'Maharashtra'};
+  // address.forEach(
+  //   (key,value) => print(
+  //     ('$key = $value')
+  //   )
+  // );
+
+// ## FOREACH with LIST extended
+// to get index of this list, convert it to map and then by using foreach take the index value.
+// works object by object
+
+  //  var student = ['Sagar', 'Kita', 'Sujay'];
+  //  student.asMap().forEach((i, value) => print('$i = $value'));
+
+  /* ************************************************************************ */
+
+// # BREAK AND CONTINUE
+
+  // var is_fetching = true;
+  // var n = 0;
+  // while (is_fetching) {
+  //   n++;
+  //   if (n == 10) {
+  //     break;
+  //   }
+  //   print("Data Fetching.... $n");
+  // }
+
+  // var is_fetching = true;
+  // var n = 0;
+  // while (is_fetching) {
+  //   n++;
+  //   if (n == 10) {
+  //     break;
+  //   }
+  //   if (n == 5) { //further loop skip
+  //     continue;
+  //   }
+  //   print("Data Fetching.... $n");
+  // }
+
+// # SWITCH AND CASE
+
+  // var command = 'PENDING';
+  // switch (command) {
+  //   case 'CLOSED':
+  //     print('Closed Ticket Closed');
+  //     break;
+  //   case 'PENDING':
+  //     print('Complaint Ticket Pending');
+  //     break;
+  //   case 'DENIED':
+  //     print('Complaint Ticket Denied');
+  //     break;
+  //   case 'OPEN':
+  //     print('Complaint Ticket Open');
+  //     break;
+  //   default:
+  //     print("Invalid Complaint Ticket");
+  // }
+
+  /* ************************************************************************ */
+
+// # FUNCTION
+// In dart, functions works as an object.
+// Dart is true object oriented language
+// So function is object, they are function type object
+// Because of that you can assign function to any variable, or as an argument you can pass the function to another function.
+/*
+ # Defining a function
+  returnType function_name(datatype parameter){ 
+    statements
+    return statement
+  }
+
+ # Calling Function
+  function_name();
+*/
+// parameters can be zero
+
+// ## Function without Parameter
+  // myfun() {
+  //   print("Hello Dart");
+  // }
+
+  // myfun();
+  //after this function execution below code will start executing
+
+// ## funtion with return value
+
+  // addfun() {
+  //   int a = 10;
+  //   int b = 20;
+  //   return a + b;
+  // }
+
+  // var total = addfun(); //variable to hold return value
+  // print(total);
+
+  // int addfun() {     //int added - define return type
+  //   int a = 10;
+  //   int b = 20;
+  //   return a + b;
+  // }
+
+  // var total = addfun(); //variable to hold return value
+  // print(total);
+
+// ## Function with Parameter
+// ### Positional parameter
+
+  // int addfun(a, b) {
+  //   return a + b;
+  // }
+
+  // var total = addfun(10, 20);
+  // print(total);
+
+// strict datatype of parameters
+
+  // int addfun(int a, int b) {
+  //   return a + b;
+  // }
+
+  // var total = addfun(10, 20);
+  // print(total);
+
+// optional positional parameters
+// above compulsory you need to pass arguments as per defined parameters
+
+//mandatory parameters example
+  // String introfun(String name, String city) {
+  //   return "I am $name from $city";
+  // }
+
+  // var info = introfun("Sagar", "Pune");
+  // print(info);
+
+//optional parameters
+
+  // String introfun(String name, [String? city]) {
+  //   return "I am $name from $city";
+  // }
+
+  // var info = introfun("Sagar");
+  // print(info);
+
+// advancement in code - improved code
+
+  // String introfun(String name, [String? city]) {
+  //   if (city != null) {
+  //     return "I am $name from $city";
+  //   }
+  //   return "I am $name";
+  // }
+
+  // var info = introfun("Sagar");
+  // print(info);
+
+// ### Default Value Parameter
+
+  // String introfun(String name, [String? city = "Mumbai"]) {
+  //   return "I am $name from $city";
+  // }
+
+  // var info = introfun("Sagar");
+  // print(info);
+
+// ### NAMED PARAMETER
+
+  // addfun({a, b}) {  // put curly braces
+  //   print('A = $a');
+  //   print('B = $b');
+  // }
+
+  // addfun(b:10, a:20);
+
+// with String Parametr
+  //  addfun({ a,b}) {  // put curly braces
+  //   print('A = $a');
+  //   print('B = $b');
+  // }
+
+  // addfun(b:"Sagar", a:20);
+
+// With strict datatype parameters
+  //  addfun({int? a,int? b}) {  // put curly braces
+  //     print('A = $a');
+  //     print('B = $b');
+  //   }
+
+  //   addfun(b:10, a:20);
+
+// Combination of positional and named parameters
+  //  addfun(x, {int? a,int? b}) {  // put curly braces
+  //     print('A = $a');
+  //     print('B = $b');
+  //     print('X = $x');
+  //   }
+
+  //   addfun("sagar", b:10, a:20);
+
+  //will not work - error - coz its positional - but it works here
+  //   addfun(x, {int? a,int? b}) {  // put curly braces
+  //   print('A = $a');
+  //   print('B = $b');
+  //   print('X = $x');
+  // }
+
+  // addfun(b:10, a:20, "Sagar");
+
+  // defining strict data type
+  // addfun(int x, {int? a, int? b}) {
+  //   // put curly braces
+  //   print('A = $a');
+  //   print('B = $b');
+  //   print('X = $x');
+  // }
+
+  // addfun(25, b: 10, a: 20);
+
+//3.34.45
+// ## ANANONYMOUS FUNCTION
+// function whioch doesn't have any name
+// also called callback function, lambda function, lambda expression, closure, 
+
+// normal function syntax
+// function_name(){
+//   statements
+// }
+
+// anonymous function syntax
+// (){
+//   statments
+// }
+
+// use
+  // var student = ["Sagar", "Sumit", "Kita"];
+  // student.forEach((value) {
+  //   print(value);
+  // });
+
+// ## ARROW FUNCTION
+// to make this even smaller for a single statement or use print like above or for return - you can use arrow function to use for single line statement
+
+  var student = ['Sagar', 'Kita', 'Sumit'];
+  student.forEach((value) => print(value));
 }
