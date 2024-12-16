@@ -7,7 +7,7 @@ C-style syntax. Dart can compile to either native code or Javascript.
 // import 'dart:async';
 // import 'dart:html';
 
-import 'dart:ffi';
+// import 'dart:ffi';
 
 void main() {
   /*entry point of all dart programs - main function
